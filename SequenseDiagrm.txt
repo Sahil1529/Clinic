@@ -1,0 +1,25 @@
+@startuml Sequense  
+
+actor pateint
+participant Reciption
+participant Doctor
+participant medicines
+participant Billing 
+
+pateint ->Reciption: Take Appointment 
+
+
+Reciption ->Doctor: Give Details About pateint enquiry
+Doctor -->Reciption: inform about Appointment
+Reciption -->pateint: Schedule Appointment
+
+pateint ->Doctor: had a word with doctor about problem
+Doctor -->pateint: Give the require treatment
+
+Doctor ->medicines: Pick Out Require Medicines
+medicines -->pateint: Give it to the Pateint with Dosage Timimngs 
+
+pateint ->Billing: Submit the file And pay the bill
+Billing -->pateint: Give a Bill Recipet
+
+@enduml
